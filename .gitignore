@@ -1,0 +1,10 @@
+# venvs
+.venv_voice/
+# generated media (large)
+work/
+publish/*.mp4
+# python cache
+__pycache__/
+*.pyc
+# local state
+run_status.log

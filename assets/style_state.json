@@ -1,0 +1,11 @@
+{
+  "history": [
+    {
+      "lut": "clean_bright.cube",
+      "music": "lofi",
+      "hook": "number-first",
+      "caption_anim": "slide",
+      "transition": "hard-only"
+    }
+  ]
+}

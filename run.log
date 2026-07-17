@@ -1,0 +1,20 @@
+[gpu] NVENC encoder: ENABLED (h264_nvenc)
+
+=== video 1/1 ===
+[topic] The deepest point in the ocean where a human has walked
+[script] 'The deepest point in the ocean where a human has walked — the truth nobody tells you' (6 beats)
+WARNING: Defaulting repo_id to hexgrad/Kokoro-82M. Pass repo_id='hexgrad/Kokoro-82M' to suppress this warning.
+C:\Users\Avishkar\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\modules\rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+C:\Users\Avishkar\AppData\Local\Programs\Python\Python312\Lib\site-packages\torch\nn\utils\weight_norm.py:143: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[voice] 22.8s
+  [visual 0] wikimedia
+  [visual 1] wikimedia
+  [visual 2] wikimedia
+  [visual 3] wikimedia
+  [visual 4] wikimedia
+  [visual 5] wikimedia
+[done] -> C:\Users\Avishkar\faceless-engine\publish\vid_1784207901.mp4
+       metadata -> C:\Users\Avishkar\faceless-engine\publish\vid_1784207901.txt

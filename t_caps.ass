@@ -1,0 +1,88 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Active, Anton, 120, &H0018C5F5, &H00000000, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 3, 0, 1, 7, 1, 2, 0, 0, 0, 1
+Style: Spoken, Anton, 104, &H00FFFFFF, &H00000000, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 2, 0, 1, 6, 1, 2, 0, 0, 0, 1
+Style: Ghost, Anton, 76, &H00808080, &H00000000, &H00000000, &H00000000, 1, 0, 0, 0, 100, 100, 2, 0, 1, 4, 1, 2, 0, 0, 0, 1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.37,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}Most
+Dialogue: 0,0:00:00.37,0:00:00.75,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}people
+Dialogue: 0,0:00:00.75,0:00:00.75,Ghost,,540,540,0,,{\pos(540,1117)\an2}PEOPLE
+Dialogue: 0,0:00:00.75,0:00:01.12,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}have
+Dialogue: 0,0:00:01.12,0:00:01.49,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}never
+Dialogue: 0,0:00:01.49,0:00:01.49,Ghost,,540,540,0,,{\pos(540,1117)\an2}NEVER
+Dialogue: 0,0:00:01.49,0:00:01.87,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}heard
+Dialogue: 0,0:00:01.87,0:00:02.24,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}of
+Dialogue: 0,0:00:02.24,0:00:02.24,Ghost,,540,540,0,,{\pos(540,1117)\an2}OF
+Dialogue: 0,0:00:02.24,0:00:02.62,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}the
+Dialogue: 0,0:00:02.62,0:00:02.99,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}mariana
+Dialogue: 0,0:00:02.99,0:00:02.99,Ghost,,540,540,0,,{\pos(540,1117)\an2}MARIANA
+Dialogue: 0,0:00:02.99,0:00:03.36,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,168,\fscx120\fscy120)\t(168,238,\fscx100\fscy100)}trench.
+Dialogue: 0,0:00:03.36,0:00:03.75,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,175,\fscx120\fscy120)\t(175,245,\fscx100\fscy100)}But
+Dialogue: 0,0:00:03.75,0:00:03.75,Ghost,,540,540,0,,{\pos(540,1117)\an2}BUT
+Dialogue: 0,0:00:03.75,0:00:04.14,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,175,\fscx120\fscy120)\t(175,245,\fscx100\fscy100)}the
+Dialogue: 0,0:00:04.14,0:00:04.53,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,175,\fscx120\fscy120)\t(175,245,\fscx100\fscy100)}truth
+Dialogue: 0,0:00:04.53,0:00:04.53,Ghost,,540,540,0,,{\pos(540,1117)\an2}TRUTH
+Dialogue: 0,0:00:04.53,0:00:04.92,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,175,\fscx120\fscy120)\t(175,245,\fscx100\fscy100)}is
+Dialogue: 0,0:00:04.92,0:00:05.31,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,175,\fscx120\fscy120)\t(175,245,\fscx100\fscy100)}stranger
+Dialogue: 0,0:00:05.31,0:00:05.31,Ghost,,540,540,0,,{\pos(540,1117)\an2}STRANGER
+Dialogue: 0,0:00:05.31,0:00:05.70,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,175,\fscx120\fscy120)\t(175,245,\fscx100\fscy100)}than
+Dialogue: 0,0:00:05.70,0:00:06.09,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,175,\fscx120\fscy120)\t(175,245,\fscx100\fscy100)}any
+Dialogue: 0,0:00:06.09,0:00:06.09,Ghost,,540,540,0,,{\pos(540,1117)\an2}ANY
+Dialogue: 0,0:00:06.09,0:00:06.47,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,175,\fscx120\fscy120)\t(175,245,\fscx100\fscy100)}story.
+Dialogue: 0,0:00:06.47,0:00:06.86,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}Scientists
+Dialogue: 0,0:00:06.86,0:00:06.86,Ghost,,540,540,0,,{\pos(540,1117)\an2}SCIENTISTS
+Dialogue: 0,0:00:06.86,0:00:07.24,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}found
+Dialogue: 0,0:00:07.24,0:00:07.62,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}something
+Dialogue: 0,0:00:07.62,0:00:07.62,Ghost,,540,540,0,,{\pos(540,1117)\an2}SOMETHING
+Dialogue: 0,0:00:07.62,0:00:08.01,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}that
+Dialogue: 0,0:00:08.01,0:00:08.39,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}breaks
+Dialogue: 0,0:00:08.39,0:00:08.39,Ghost,,540,540,0,,{\pos(540,1117)\an2}BREAKS
+Dialogue: 0,0:00:08.39,0:00:08.78,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}what
+Dialogue: 0,0:00:08.78,0:00:09.16,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}we
+Dialogue: 0,0:00:09.16,0:00:09.16,Ghost,,540,540,0,,{\pos(540,1117)\an2}WE
+Dialogue: 0,0:00:09.16,0:00:09.54,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}thought
+Dialogue: 0,0:00:09.54,0:00:09.93,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}we
+Dialogue: 0,0:00:09.93,0:00:09.93,Ghost,,540,540,0,,{\pos(540,1117)\an2}WE
+Dialogue: 0,0:00:09.93,0:00:10.31,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,172,\fscx120\fscy120)\t(172,242,\fscx100\fscy100)}knew.
+Dialogue: 0,0:00:10.31,0:00:10.64,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}It
+Dialogue: 0,0:00:10.64,0:00:10.64,Ghost,,540,540,0,,{\pos(540,1117)\an2}IT
+Dialogue: 0,0:00:10.64,0:00:10.98,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}changes
+Dialogue: 0,0:00:10.98,0:00:11.31,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}how
+Dialogue: 0,0:00:11.31,0:00:11.31,Ghost,,540,540,0,,{\pos(540,1117)\an2}HOW
+Dialogue: 0,0:00:11.31,0:00:11.64,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}we
+Dialogue: 0,0:00:11.64,0:00:11.98,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}see
+Dialogue: 0,0:00:11.98,0:00:11.98,Ghost,,540,540,0,,{\pos(540,1117)\an2}SEE
+Dialogue: 0,0:00:11.98,0:00:12.31,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}the
+Dialogue: 0,0:00:12.31,0:00:12.64,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}world
+Dialogue: 0,0:00:12.64,0:00:12.64,Ghost,,540,540,0,,{\pos(540,1117)\an2}WORLD
+Dialogue: 0,0:00:12.64,0:00:12.98,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}around
+Dialogue: 0,0:00:12.98,0:00:13.31,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,149,\fscx120\fscy120)\t(149,219,\fscx100\fscy100)}us.
+Dialogue: 0,0:00:13.31,0:00:13.31,Ghost,,540,540,0,,{\pos(540,1117)\an2}US.
+Dialogue: 0,0:00:13.31,0:00:13.83,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,235,\fscx120\fscy120)\t(235,305,\fscx100\fscy100)}And
+Dialogue: 0,0:00:13.83,0:00:14.36,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,235,\fscx120\fscy120)\t(235,305,\fscx100\fscy100)}almost
+Dialogue: 0,0:00:14.36,0:00:14.36,Ghost,,540,540,0,,{\pos(540,1117)\an2}ALMOST
+Dialogue: 0,0:00:14.36,0:00:14.88,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,235,\fscx120\fscy120)\t(235,305,\fscx100\fscy100)}nobody
+Dialogue: 0,0:00:14.88,0:00:15.40,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,235,\fscx120\fscy120)\t(235,305,\fscx100\fscy100)}is
+Dialogue: 0,0:00:15.40,0:00:15.40,Ghost,,540,540,0,,{\pos(540,1117)\an2}IS
+Dialogue: 0,0:00:15.40,0:00:15.93,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,235,\fscx120\fscy120)\t(235,305,\fscx100\fscy100)}talking
+Dialogue: 0,0:00:15.93,0:00:16.45,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,235,\fscx120\fscy120)\t(235,305,\fscx100\fscy100)}about
+Dialogue: 0,0:00:16.45,0:00:16.45,Ghost,,540,540,0,,{\pos(540,1117)\an2}ABOUT
+Dialogue: 0,0:00:16.45,0:00:16.98,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,235,\fscx120\fscy120)\t(235,305,\fscx100\fscy100)}it.
+Dialogue: 0,0:00:16.98,0:00:17.47,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,220,\fscx120\fscy120)\t(220,290,\fscx100\fscy100)}Follow
+Dialogue: 0,0:00:17.47,0:00:17.47,Ghost,,540,540,0,,{\pos(540,1117)\an2}FOLLOW
+Dialogue: 0,0:00:17.47,0:00:17.96,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,220,\fscx120\fscy120)\t(220,290,\fscx100\fscy100)}for
+Dialogue: 0,0:00:17.96,0:00:18.44,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,220,\fscx120\fscy120)\t(220,290,\fscx100\fscy100)}more
+Dialogue: 0,0:00:18.44,0:00:18.44,Ghost,,540,540,0,,{\pos(540,1117)\an2}MORE
+Dialogue: 0,0:00:18.44,0:00:18.93,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,220,\fscx120\fscy120)\t(220,290,\fscx100\fscy100)}things
+Dialogue: 0,0:00:18.93,0:00:19.42,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,220,\fscx120\fscy120)\t(220,290,\fscx100\fscy100)}you
+Dialogue: 0,0:00:19.42,0:00:19.42,Ghost,,540,540,0,,{\pos(540,1117)\an2}YOU
+Dialogue: 0,0:00:19.42,0:00:19.91,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,220,\fscx120\fscy120)\t(220,290,\fscx100\fscy100)}didn't
+Dialogue: 0,0:00:19.91,0:00:20.40,Spoken,,540,540,0,,{\pos(540,1267)\an2\fscx100\fscy100\t(0,220,\fscx120\fscy120)\t(220,290,\fscx100\fscy100)}know.

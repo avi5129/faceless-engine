@@ -1,0 +1,6 @@
+beat 0: gradient
+beat 1: gradient
+beat 2: gradient
+beat 3: gradient
+beat 4: gradient
+beat 5: gradient

@@ -1,0 +1,19 @@
+# Topic seeds for the "curiosity / discovery facts" niche.
+# The engine rotates through these, then can expand via LLM. Add/remove freely.
+# Each line = one short idea. The script stage expands it into a full script.
+
+The deepest point in the ocean where a human has walked
+A planet where it rains molten glass sideways
+The animal that doesn't age and barely dies
+A library that burns books on purpose to stay alive
+The island that appears and disappears with the tide
+What actually happens to your body in space for a year
+The creature with 40 brains and no face
+A mountain taller than Everest that you can't see
+The sound that no human has ever heard
+The frozen lake under Antarctica that holds a secret
+Why the sky is not actually blue
+The disease that makes you feel no pain
+A forest that grows diamonds
+The year the whole world stood still for 5 minutes
+The animal that survives being frozen solid
