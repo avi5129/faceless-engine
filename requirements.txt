@@ -1,0 +1,11 @@
+# Faceless Engine — main runtime dependencies (free, local, CPU-friendly).
+# Install:  python -m pip install -r requirements.txt
+# The heavy GPU voice stack (Chatterbox/torch/stable-ts) lives in a SEPARATE
+# venv — see requirements-voice.txt + setup.sh. You do NOT need it to run the
+# engine; voice falls back Kokoro -> edge-tts -> silent without it.
+
+kokoro           # BEST free local TTS (default voice engine)
+numpy            # audio array handling
+soundfile        # write kokoro wav output
+edge-tts         # free online TTS fallback (needs internet)
+requests         # Wikimedia / Pexels stock fetch

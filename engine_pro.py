@@ -72,7 +72,7 @@ def run_once(cfg, topic=None, seed=None):
         final_mp4 = os.path.join(PUBLISH, name + ".mp4")
         if os.path.exists(out_mp4):
             shutil.move(out_mp4, final_mp4)
-            ENG.write_metadata(script, PUBLISH, name)
+            ENG.write_metadata(script, PUBLISH, name, cfg)
             # copy attributions for compliance
             attr = os.path.join(work_dir, "attributions.txt")
             if os.path.exists(attr):

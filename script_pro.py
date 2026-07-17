@@ -89,7 +89,7 @@ def build_script_pro(topic, cfg, style, seed=None):
     beats = [_humanize(b) for b in beats]
     beats = _ensure_specificity(beats, topic)
 
-    hook_format = style.get("hook", "curiosity-gap")
+    hook_format = style.get("hook") or _hook_for_niche(cfg)
     n = rng.randint(20, 45)
     hook = HOOK_TEMPLATES.get(hook_format, HOOK_TEMPLATES["curiosity-gap"]).format(
         topic=topic.lower(), n=n)
@@ -99,18 +99,64 @@ def build_script_pro(topic, cfg, style, seed=None):
 
     visual_query = base.get("visual_query", " ".join(topic.split()[:3]))
 
+    # Hashtags follow the configured niche (F7 fix: base script hardcodes
+    # #curiosity; if the base leaked curiosity tags while our niche is History,
+    # override so the published video is actually on-niche).
+    base_tags = base.get("hashtags") or []
+    if _niche(cfg) == "history" and any("curiosity" in t.lower() for t in base_tags):
+        hashtags = _hashtags_for_niche(cfg)
+    else:
+        hashtags = base_tags or _hashtags_for_niche(cfg)
+
     return {
         "hook": hook,
         "beats": beats,
         "title": base.get("title", f"{topic} — the truth nobody tells you"),
         "description": base.get("description",
                                 f"What surprised you most about {topic}? Comment below."),
-        "hashtags": base.get("hashtags", ["#shorts", "#curiosity", "#didyouknow"]),
+        "hashtags": hashtags,
         "visual_query": visual_query,
         "reveal_line": reveal_line,
         "hook_format": hook_format,
         "topic": topic,
     }
+
+
+def _niche(cfg):
+    """Configured niche (F7 fix): History wedge is the default strategy.
+
+    Strips inline '#' comments (engine.load_config strips them; a raw
+    configparser does not), so the comparison is robust either way.
+    """
+    try:
+        raw = cfg.get("engine", "niche", fallback="history")
+    except Exception:
+        return "history"
+    return raw.split("#")[0].strip().lower() or "history"
+
+
+def _hook_for_niche(cfg):
+    """Default hook format by niche; History leans on myth-bust / then-vs-now."""
+    niche = _niche(cfg)
+    return {
+        "history": "myth-bust",
+        "curiosity": "curiosity-gap",
+        "money": "number-first",
+        "reddit": "what-if",
+        "tech": "science-says",
+    }.get(niche, "curiosity-gap")
+
+
+def _hashtags_for_niche(cfg):
+    """Hashtags follow the configured niche (no hardcoded #curiosity)."""
+    niche = _niche(cfg)
+    return {
+        "history": ["#shorts", "#history", "#didyouknow"],
+        "curiosity": ["#shorts", "#curiosity", "#didyouknow"],
+        "money": ["#shorts", "#money", "#finance"],
+        "reddit": ["#shorts", "#reddit", "#interesting"],
+        "tech": ["#shorts", "#tech", "#ai"],
+    }.get(niche, ["#shorts", "#history", "#didyouknow"])
 
 
 if __name__ == "__main__":

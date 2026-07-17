@@ -485,12 +485,24 @@ def build_ass(beats, total_dur, w, h):
 # ---------------------------------------------------------------------------
 # Stage 6-7: metadata + queue
 # ---------------------------------------------------------------------------
-def write_metadata(script, out_dir, name):
+def write_metadata(script, out_dir, name, cfg=None):
     title = script.get("title", name)
     desc = script.get("description", "")
     tags = " ".join(script.get("hashtags", ["#shorts"]))
-    affiliate = "\n\n🔔 More faceless content: <your-affiliate-or-link>"
-    txt = f"TITLE:\n{title}\n\nDESCRIPTION:\n{desc}{affiliate}\n\nHASHTAGS:\n{tags}\n"
+    # F4: revenue line is config-driven. Only emit it when the user has set a
+    # real offer_url — never ship a placeholder/broken link.
+    if cfg is None:
+        try:
+            cfg = load_config()
+        except Exception:
+            cfg = None
+    offer = ""
+    if cfg is not None:
+        url = (cfg.get("revenue", "offer_url", fallback="") or "").strip()
+        cta = (cfg.get("revenue", "offer_cta", fallback="") or "").strip()
+        if url:
+            offer = f"\n\n{cta} {url}".rstrip()
+    txt = f"TITLE:\n{title}\n\nDESCRIPTION:\n{desc}{offer}\n\nHASHTAGS:\n{tags}\n"
     with open(os.path.join(out_dir, name + ".txt"), "w", encoding="utf-8") as f:
         f.write(txt)
 
@@ -521,7 +533,7 @@ def run_once(cfg, topic=None):
     final_mp4 = os.path.join(PUBLISH, name + ".mp4")
     if os.path.exists(out_mp4):
         shutil.move(out_mp4, final_mp4)
-        write_metadata(script, PUBLISH, name)
+        write_metadata(script, PUBLISH, name, cfg)
         print(f"[done] -> {final_mp4}")
         print(f"       metadata -> {os.path.join(PUBLISH, name + '.txt')}")
         # clean the per-run temp dir; keep publish/ and the engine outputs

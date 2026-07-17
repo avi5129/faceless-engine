@@ -1,0 +1,14 @@
+# Faceless Engine — GPU voice stack (OPTIONAL, isolated venv).
+# These are large (torch+CUDA ~2.5GB). Install ONLY in the dedicated voice venv,
+# not the main env. setup.sh creates .venv_voice and installs these there.
+#
+#   python -m venv .venv_voice
+#   .venv_voice/Scripts/python -m pip install -r requirements-voice.txt
+#
+# Word-level captions (stable-ts) and premium Chatterbox voice use this venv.
+# Without it the engine still runs (Kokoro/edge fallback + beat-level captions).
+
+torch            # install the CUDA build for your GPU from pytorch.org if you want GPU
+torchaudio
+chatterbox-tts   # premium local voice (GPU)
+stable-ts        # word-level caption timing (whisper-based)

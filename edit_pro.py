@@ -182,16 +182,35 @@ def edit_video_pro(script, voice_mp3, dur, cfg, work_dir, out_mp4, style):
         print("  [edit] visuals timeline failed")
         return out_mp4
 
-    # 2) captions: word-level via stable-ts (the standard). Must succeed.
+    # 2) captions: word-level via stable-ts (the standard). If it fails, fall
+    #    back to beat-level captions (one line per beat, timed to the edit) so
+    #    the video STILL renders — never raise and produce zero output (F2).
     words = []
     venv_py = os.path.join(ROOT, ".venv_voice", "Scripts", "python.exe")
     if os.path.exists(venv_py):
-        # Word-level timing is a hard standard — do not silently degrade to
-        # beat-level captions. If stable-ts fails we surface the error.
-        words = CAP.align_words_stable_ts(voice_mp3, venv_py, model="base.en")
+        try:
+            words = CAP.align_words_stable_ts(voice_mp3, venv_py, model="base.en")
+        except Exception as e:  # stable-ts missing / venv broken / model fail
+            print(f"  [edit] word-level align failed ({e}); "
+                  f"falling back to beat-level captions")
+            words = []
     if not words:
-        raise RuntimeError("word-level caption timing unavailable — "
-                           "cannot produce below-standard captions")
+        # Beat-level fallback: one caption per beat, timed to the cut schedule.
+        # Lower-standard than word-level, but a produced video beats no video.
+        words = []
+        t = 0.0
+        for i, b in enumerate(beats):
+            dur_i = durs[i] if i < len(durs) else (dur / max(1, len(beats)))
+            words.append((b, t, t + dur_i))
+            t += dur_i
+        if words:
+            print("  [edit] caption fallback: beat-level captions ("
+                  f"{len(words)} beats)")
+    if not words:
+        # Truly nothing to caption (no beats) — still emit a single hold card
+        # rather than crash, so the pipeline never dies on captions.
+        words = [(script.get("topic", "Faceless"), 0.0, dur)]
+        print("  [edit] caption fallback: topic hold-card (no beats)")
     ass = CAP.build_ass(words, os.path.join(work_dir, "caps.ass"), w, h,
                         per_page=2, seed=style.get("seed"))
 
